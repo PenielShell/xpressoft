@@ -1,0 +1,57 @@
+<div id="mobile_nav" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <ul class="uk-nav uk-nav-offcanvas">
+            <li class="">
+                <a data-ng-click="scrollNav($event)" class="link_features" href="#">Features</a>
+            </li>
+            <!-- <li class="">
+                <a data-ng-click="scrollNav($event)" class="link_offer" href="#">Offer</a>
+            </li> -->
+            <li class="">
+                <a data-ng-click="scrollNav($event)" class="link_pricing" href="#">News</a>
+            </li>
+            <!-- <li class="">
+                <a data-ng-click="scrollNav($event)" class="link_clients" href="#">Clients</a>
+            </li> -->
+            <li class="">
+                <a data-ng-click="scrollNav($event)" class="link_facts" href="#">Facts</a>
+            </li>
+            <li class="">
+                <a data-ng-click="scrollNav($event)" class="link_projects" href="#">Projects</a>
+            </li>
+            <li class="">
+                <a data-ng-click="scrollNav($event)" class="link_team" href="#">Team</a>
+            </li>
+            <li class="">
+                <a data-ng-click="scrollNav($event)" class="link_customers" href="#">Contacts</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal_subscribe" class="uk-modal subscribe_window">
+    <div class="uk-modal-dialog uk-text-center uk-border-rounded">
+        <h4 class="uk-h4 uk-text-contrast subscribe_window_title">Subscribe to our newsletter</h4>
+
+        <form data-ng-submit="mailchimpForm" class="uk-form form_sign_in" autocomplete="off">
+            <div class="uk-grid uk-grid-collapse uk-container-center uk-width-medium-3-4">
+                <div class="uk-width-medium-3-4 uk-margin-bottom">
+                    <input name="email" class="uk-width-1-1 uk-text-contrast form_input" type="email" placeholder="Enter your e-mail">
+                </div>
+                <div class="uk-width-medium-1-4 uk-margin-bottom">
+                    <button class="uk-width-1-1 uk-button button_custom_green form_button" type="submit">Subscribe</button>
+                </div>
+            </div>
+            <div class="response_wrapper">
+
+                <div class="success">E-mail has been added successfully.</div>
+                <div class="success_response"></div>
+
+                <div class="error">E-mail must be valid and message must be longer than 1 character.</div>
+                <div class="error_response"></div>
+            </div>
+        </form>
+        <a class="uk-modal-close uk-close uk-border-circle subscribe_window_close"></a>
+    </div>
+</div>
+<router-outlet></router-outlet>
